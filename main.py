@@ -1,18 +1,20 @@
-import requests
-import json
+import curses
+from curses import wrapper
+from scrdraw import mainMenu, update
+
+def setup(stdscr):
+    pass
+
+def main(stdscr):
 
 
-# word = input("Your word: ")
-word = "find"
+    # Draw menu
+    Menu = mainMenu(stdscr)
+    Menu.draw()
+    # Draw border
+    Border = update(stdscr)
+    Border.updateBorder()
 
-# FreeDictionary
-response = requests.get(f"https://api.dictionaryapi.dev/api/v2/entries/en/{word}")
+    stdscr.getch()
 
-r_json = response.json()
-
-# print(json.dumps(r_json, indent= 4))
-
-
-synonym = r_json[0]["meanings"][0]["definitions"][0]["synonyms"]
-for i in synonym :
-    print(i)
+wrapper(main)
