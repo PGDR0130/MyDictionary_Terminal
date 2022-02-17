@@ -1,20 +1,32 @@
 import curses
 from curses import wrapper
-from scrdraw import mainMenu, update
+from tkinter import Menu
+from scrdraw import mainPage, mainMenu
 
-def setup(stdscr):
-    pass
+class Main:
+    def __init__(self, stdscr) -> None:
+        self.stdscr = stdscr
+
+        # Curses setup
+        curses.noecho()
+        curses.cbreak()
+        # self.stdscr.nodelay(True)
+
+    def main(self):
+        Menu = mainMenu(self.stdscr)
+        Menu.draw()
+        self.stdscr.getch()
+
+        layout = mainPage(self.stdscr)
+        layout.main()
+        self.stdscr.getch()
+
+
+
 
 def main(stdscr):
+    Run = Main(stdscr)
+    Run.main()
 
-
-    # Draw menu
-    Menu = mainMenu(stdscr)
-    Menu.draw()
-    # Draw border
-    Border = update(stdscr)
-    Border.updateBorder()
-
-    stdscr.getch()
-
-wrapper(main)
+if __name__ == '__main__':
+    wrapper(main)

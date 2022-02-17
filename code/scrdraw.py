@@ -1,6 +1,4 @@
-
-from email import message
-
+import curses
 
 class mainMenu:
     def __init__(self, scr) -> None:
@@ -30,17 +28,45 @@ class mainMenu:
         self.scr.addstr(self.TitleY, self.TitleX, self.Title)
         # Subtitle - "The best terminal dictionary"
         self.scr.addstr(self.subTitleY, self.subTitleX, self.subTitle)
-
-        self.scr.refresh()
-
-
-class update:
-    def __init__(self, scr) -> None:
-        self.scr = scr
-
-    def updateBorder(self):
-        """
-        Border that will be constintly updating all the time 
-        """
+        # Border 
         self.scr.border('|', '|', '-', '-', 'O', 'O', 'O', 'O')
+
         self.scr.refresh()
+
+
+class mainPage:
+    def __init__(self, stdscr) -> None:
+        # defult scr
+        self.scr = stdscr
+        self.maxY = self.scr.getmaxyx()[0]
+        self.maxX = self.scr.getmaxyx()[1]
+        self.midX = self.maxX//2
+
+        # mainDic scr - Cam
+        self.mainDicY = 1
+        self.mainDicX = 1
+        self.mainheight = self.maxY-self.mainDicY - 2
+        self.mainwidth = self.maxX-self.mainDicX - 2
+        self.mainDic = curses.newwin(self.mainheight, self.mainwidth, self.mainDicY, self.mainDicX)
+        # secondDic scr - coll
+        self.secDicY = 1
+        self.secDicX = self.maxX + 1
+        self.secheight = self.maxY-self.secDicY - 2 
+        self.secwidth = self.maxX-self.secDicX - 2
+        self.secDic = curses.newwin(self.secheight, self.secwidth, self.secDicY, self.secDicX)
+
+        # top right information
+        self.info = " Own Dic. V1 "
+        self.infoY = 0
+        self.infoX = self.maxX//20
+
+    def main(self):
+        self.scr.clear()
+        self.scr.border()
+        # info
+        self.scr.addstr(self.infoY, self.infoX, self.info)
+        self.scr.refresh()
+
+        self.mainDic.border()
+        self.secDic.border()
+        
