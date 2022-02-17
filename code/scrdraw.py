@@ -15,7 +15,7 @@ class mainMenu:
         self.TitleX = self.midX - len(self.Title)//2
         # Subtitle
         self.subTitle = "The best terminal dictionary ever made"
-        self.subTitleY = self.TitleY + 2
+        self.subTitleY = self.TitleY + 1
         self.subTitleX = self.midX - len(self.subTitle)//2
 
     def draw(self) -> None:
