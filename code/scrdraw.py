@@ -1,6 +1,4 @@
-
-from email import message
-
+import curses
 
 class mainMenu:
     def __init__(self, scr) -> None:
@@ -30,11 +28,12 @@ class mainMenu:
         self.scr.addstr(self.TitleY, self.TitleX, self.Title)
         # Subtitle - "The best terminal dictionary"
         self.scr.addstr(self.subTitleY, self.subTitleX, self.subTitle)
+        # Border 
+        self.scr.border('|', '|', '-', '-', 'O', 'O', 'O', 'O')
 
         self.scr.refresh()
 
 
-<<<<<<< HEAD
 class mainPage:
     def __init__(self, stdscr) -> None:
         # defult scr
@@ -88,15 +87,3 @@ class comLine:
 
     def main(self):
         pass
-=======
-class update:
-    def __init__(self, scr) -> None:
-        self.scr = scr
-
-    def updateBorder(self):
-        """
-        Border that will be constintly updating all the time 
-        """
-        self.scr.border('|', '|', '-', '-', 'O', 'O', 'O', 'O')
-        self.scr.refresh()
->>>>>>> parent of b605152 (mainPage almost done)
