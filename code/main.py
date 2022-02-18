@@ -1,5 +1,6 @@
 import curses
 from curses import wrapper
+<<<<<<< HEAD
 from scrdraw import mainPage, mainMenu
 
 class input:
@@ -62,12 +63,23 @@ class Main:
                 layout.draw()
                     
     
+=======
+from scrdraw import mainMenu, update
 
-
+def setup(stdscr):
+    pass
 
 def main(stdscr):
-    Run = Main(stdscr)
-    Run.main()
+>>>>>>> parent of b605152 (mainPage almost done)
 
-if __name__ == '__main__':
-    wrapper(main)
+
+    # Draw menu
+    Menu = mainMenu(stdscr)
+    Menu.draw()
+    # Draw border
+    Border = update(stdscr)
+    Border.updateBorder()
+
+    stdscr.getch()
+
+wrapper(main)
