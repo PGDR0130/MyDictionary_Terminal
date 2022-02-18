@@ -13,7 +13,7 @@ class mainMenu:
         self.TitleX = self.midX - len(self.Title)//2
         # Subtitle
         self.subTitle = "The best terminal dictionary ever made"
-        self.subTitleY = self.TitleY + 1
+        self.subTitleY = self.TitleY + 2
         self.subTitleX = self.midX - len(self.subTitle)//2
 
     def draw(self) -> None:
@@ -45,14 +45,14 @@ class mainPage:
         # mainDic scr - Cam
         self.mainDicY = 1
         self.mainDicX = 1
-        self.mainheight = self.maxY-self.mainDicY - 2
-        self.mainwidth = self.maxX-self.mainDicX - 2
+        self.mainheight = self.maxY-self.mainDicY - 1
+        self.mainwidth = self.maxX-self.mainDicX - 1
         self.mainDic = curses.newwin(self.mainheight, self.mainwidth, self.mainDicY, self.mainDicX)
         # secondDic scr - coll
         self.secDicY = 1
-        self.secDicX = self.maxX + 1
-        self.secheight = self.maxY-self.secDicY - 2 
-        self.secwidth = self.maxX-self.secDicX - 2
+        self.secDicX = self.midX + 1
+        self.secheight = self.maxY-self.secDicY - 1 
+        self.secwidth = self.maxX-self.secDicX - 1
         self.secDic = curses.newwin(self.secheight, self.secwidth, self.secDicY, self.secDicX)
 
         # top right information
@@ -60,7 +60,7 @@ class mainPage:
         self.infoY = 0
         self.infoX = self.maxX//20
 
-    def main(self):
+    def draw(self):
         self.scr.clear()
         self.scr.border()
         # info
@@ -69,4 +69,21 @@ class mainPage:
 
         self.mainDic.border()
         self.secDic.border()
-        
+        self.mainDic.refresh()
+        self.secDic.refresh()
+
+
+class comLine:
+    def __init__(self, stdscr) -> None:
+        """
+        command Line at the bottom of the screen 
+        commands such as search or settings
+        needs to handle user input
+        """
+        self.scr = stdscr
+
+    def input(self):
+        pass
+
+    def main(self):
+        pass
