@@ -1,73 +1,57 @@
 import curses
 from curses import wrapper
-from scrdraw import mainPage, mainMenu
+from scrdraw import mainPage, mainMenu, comLine
 
-class input:
-    def __init__(self, stdscr) -> None:
-        self.scr = stdscr
-        self.buffer = ''
-
-        # for main
-        self.run = True
-        self.focus = 'com'
-        self.update = True
-
-    def push(self, char):
-        """
-        handle the input 
-        """
-        if (char == None): self.update = False
-        else : self.update = True
-
-        if (self.focus == 'com'):
-            if (char == 'Key_Esc'):
-                self.run = False
-
-    def get_run(self):
-        """
-        return bool to determine keep running or not
-        """
-        return self.run
-
-    def get_update(self):
-        return self.update
 
 class Main:
     def __init__(self, stdscr) -> None:
         self.stdscr = stdscr
-        self.exit = True
+        self.willExit = False
+
+        self.Menu = mainMenu(self.stdscr)
+        self.layout = mainPage(self.stdscr)
+        self.command = comLine(self.stdscr)
+        self.focus = 'mainScr'
 
         # Curses setup
         curses.noecho()
         curses.cbreak()
 
-    def main(self):
-        Menu = mainMenu(self.stdscr)
-        layout = mainPage(self.stdscr)
-        Menu.draw()
-        self.stdscr.getch()
-        
-        self.stdscr.nodelay(True)
-        
-        send = input(self.stdscr)
-        layout.draw()
-        while (send.get_run()):
-            try :
-                send.push(self.stdscr.getkey())
-            except:
-                send.push(None)
+    def keyPress(self, char):
+        if char != None:
+            if self.focus == 'mainScr':
+                self.layout.debug(char)
+                if char == ord('q'):
+                    curses.endwin()
+                    self.willExit = True
+                    
+            if self.focus == 'secScr':
+                if char == ord('q'):
+                    pass
 
-            if send.get_update():
-                layout = mainPage(self.stdscr)
-                layout.draw()
+            if self.focus == 'Com':
+                self.command.input(char)
+
+    def main(self):
+        self.Menu.draw()
+        self.stdscr.getch()
+
+        self.stdscr.nodelay(True)
+
+        self.layout.draw()
+
+        while(not self.willExit):
+            try :
+                self.keyPress(self.stdscr.getch())
+            except:
+                self.keyPress(None)
                     
     
 
-
-
-def main(stdscr):
+def main():
+    stdscr = curses.initscr()
     Run = Main(stdscr)
     Run.main()
 
 if __name__ == '__main__':
-    wrapper(main)
+    main()

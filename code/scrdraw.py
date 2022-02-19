@@ -46,19 +46,21 @@ class mainPage:
         self.mainDicY = 1
         self.mainDicX = 1
         self.mainheight = self.maxY-self.mainDicY - 1
-        self.mainwidth = self.maxX-self.mainDicX - 1
+        self.mainwidth = self.midX-self.mainDicX
         self.mainDic = curses.newwin(self.mainheight, self.mainwidth, self.mainDicY, self.mainDicX)
         # secondDic scr - coll
         self.secDicY = 1
-        self.secDicX = self.midX + 1
+        self.secDicX = self.midX 
         self.secheight = self.maxY-self.secDicY - 1 
-        self.secwidth = self.maxX-self.secDicX - 1
+        self.secwidth = self.maxX-self.secDicX -1
         self.secDic = curses.newwin(self.secheight, self.secwidth, self.secDicY, self.secDicX)
 
         # top right information
         self.info = " Own Dic. V1 "
         self.infoY = 0
         self.infoX = self.maxX//20
+
+        self.test = 1
 
     def draw(self):
         self.scr.clear()
@@ -68,8 +70,8 @@ class mainPage:
         self.scr.refresh()
 
         self.mainDic.border()
-        self.secDic.border()
         self.mainDic.refresh()
+        self.secDic.border()
         self.secDic.refresh()
 
 
@@ -82,7 +84,7 @@ class comLine:
         """
         self.scr = stdscr
 
-    def input(self):
+    def input(self, char):
         pass
 
     def main(self):
