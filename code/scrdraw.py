@@ -61,6 +61,9 @@ class mainPage:
         self.infoX = self.maxX//20
 
         self.test = 1
+    def debug(self, char):
+        self.mainDic.addstr(chr(char))
+        self.mainDic.refresh()
 
     def draw(self):
         self.scr.clear()
@@ -83,6 +86,10 @@ class comLine:
         needs to handle user input
         """
         self.scr = stdscr
+        self.buf = ''
+    
+    def buffer(self):
+        pass
 
     def input(self, char):
         pass
