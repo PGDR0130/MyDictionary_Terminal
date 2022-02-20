@@ -1,6 +1,5 @@
 import curses
-from curses import wrapper
-from scrdraw import mainPage, mainMenu, comLine
+from scrdraw import Pages, Windows
 
 
 class Main:
@@ -8,9 +7,8 @@ class Main:
         self.stdscr = stdscr
         self.willExit = False
 
-        self.Menu = mainMenu(self.stdscr)
-        self.layout = mainPage(self.stdscr)
-        self.command = comLine(self.stdscr)
+        self.Menu = Pages.mainMenu(self.stdscr)
+        self.layout = Pages.mainPage(self.stdscr)
         self.focus = 'mainScr'
         self.lastFocus = 'mainScr'
 
@@ -27,9 +25,12 @@ class Main:
         if char != None:
             if char == ord(':') and self.focus != 'com':
                 changeFocus('com')
-            elif char == 27 and self.focus == 'com':
+            elif char == 27 :
                 changeFocus(self.lastFocus)
-
+            elif char == ord('1'):
+                changeFocus('mainScr')
+            elif char == ord('2'):
+                changeFocus('secScr')
 
             if self.focus == 'com':
                 self.command.input(char)
