@@ -13,6 +13,7 @@ class Main:
         self.lastFocus = 'mainScr'
 
         # Curses setup
+        curses.start_color()
         curses.curs_set(0)
         curses.noecho()
         curses.cbreak()
@@ -36,10 +37,12 @@ class Main:
                 self.command.input(char)
 
             elif self.focus == 'mainScr':
-                self.layout.debug(char)
+                # self.layout.debug(char)
                 if char == ord('q'):
                     curses.endwin()
                     self.willExit = True 
+                else:
+                    self.layout.update(char)
 
             elif self.focus == 'secScr':
                 if char == ord('q'):
