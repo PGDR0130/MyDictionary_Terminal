@@ -1,6 +1,5 @@
 import curses
-from scrdraw import Pages, Windows
-
+from scrdraw import Pages
 
 class Main:
     def __init__(self, stdscr) -> None:
@@ -13,7 +12,6 @@ class Main:
         self.lastFocus = 'mainScr'
 
         # Curses setup
-        curses.start_color()
         curses.curs_set(0)
         curses.noecho()
         curses.cbreak()
@@ -61,6 +59,9 @@ class Main:
                 self.keyPress(self.stdscr.getch())
             except:
                 self.keyPress(None)
+
+            # limit fps to save cpu usages
+            curses.napms(10)
                     
     
 

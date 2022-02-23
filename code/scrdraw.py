@@ -1,6 +1,5 @@
-from ctypes.wintypes import WORD
 import curses
-from re import S
+
 class Windows:
     class templateWin:
         def __init__(self, height, width, startY, startX) -> None:
@@ -130,7 +129,7 @@ class Pages:
             self.secDicX = self.midX 
             self.secheight = self.maxY-self.secDicY - 1 
             self.secwidth = self.maxX-self.secDicX -1
-            self.secDic = Windows.oxfordCO(self.secheight, self.secwidth, self.secDicY, self.secDicX).scr
+            self.secDic = Windows.oxfordCO(self.secheight, self.secwidth, self.secDicY, self.secDicX)
             # top right information
             self.info = " Own Dic. V1 "
             self.infoY = 0
@@ -141,13 +140,12 @@ class Pages:
             self.comheight = 1
             self.comwidth = self.maxX 
             self.com = Windows.searchBar(self.comheight, self.comwidth, self.comY , self.comX, self.mainDic)
-            self.comScr = self.com.scr
             curses.init_pair(1, curses.COLOR_WHITE, curses.COLOR_GREEN)
-            self.comScr.bkgd(' ', curses.color_pair(1))
+            self.com.scr.bkgd(' ', curses.color_pair(1))
 
         def debug(self, char):
-            self.mainDicScr.addstr(chr(char))
-            self.mainDicScr.refresh()
+            self.mainDicScr.scr.addstr(chr(char))
+            self.mainDicScr.scr.refresh()
 
         def draw(self):
             self.scr.clear()
@@ -156,8 +154,8 @@ class Pages:
             self.scr.addstr(self.infoY, self.infoX, self.info)
             self.scr.refresh()
 
-            self.comScr.addstr(' > ' + 'searchBar')
-            self.comScr.refresh()
+            self.com.scr.addstr(' > ' + 'searchBar')
+            self.com.scr.refresh()
 
             # self.mainDic.border()
             # self.mainDic.refresh()
@@ -166,6 +164,3 @@ class Pages:
         
         def update(self, char):
             self.com.input(char)
-            # self.comscr.clear()
-            # self.comscr.addstr(' > ' + self.com.buf)
-            # self.comscr.refresh()
