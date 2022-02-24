@@ -3,29 +3,34 @@ import curses
 class Windows:
     class templateWin:
         def __init__(self, height, width, startY, startX) -> None:
-            self.startY = startY
-            self.startX = startX
-            self.width = width 
-            self.height = height  
-            self.scr = curses.newwin(self.height, self.width, self.startY, self.startX)
+            self.scr = curses.newwin(height, width,startY, startX)
             # Need screen update check
             self.scrUpdate = False
 
+        def needScrUpdate(self):
+            return self.scrUpdate
+        
+        def resize(self, height, width, startY, startX):
+            # close old window and start the new one that fits new size
+            self.scr.close()
+            self.scr = curses.newwin(height, width, startY, startX)
+
 
     class searchBar(templateWin):
-        def __init__(self, height, width, startY, startX, dic) -> None:
+        def __init__(self, height, width, startY, startX, dicts:list) -> None:
             """
             command Line at the bottom of the screen 
             commands such as search or settings
             needs to handle user input
             """
             super().__init__(height, width, startY, startX)
-            self.dic = dic
+            self.dicts = dicts
             self.buf = ''  
 
         def buffer(self, char):
             if char == 10 : # Enter
-                self.dic.updateWord(self.buf)
+                for dict in self.dicts:
+                    dict.updateWord(self.buf)
                 # clear buffer
                 self.buf = '' 
             elif char == 8: # Backspace
@@ -35,7 +40,7 @@ class Windows:
 
         def update(self):
             self.scr.clear()
-            self.scr.addstr(f' > {self.buf}')
+            self.scr.addstr(f' > ' + (self.buf if self.buf != '' else 'search'))
             self.scr.refresh()
 
         def input(self, char):
@@ -45,7 +50,7 @@ class Windows:
         def main(self, command):
             pass
         
-    class cambridgeDIC(templateWin):
+    class cambridgeDict(templateWin):
         """
         The main dictionary.
         """
@@ -56,10 +61,7 @@ class Windows:
         def updateWord(self, word):
             self.word = word
             self.scr.addstr(self.word + '\n')
-            self.scr.refresh()
-            
-        def needScrUpdate(self):
-            return self.update            
+            self.scr.refresh()         
 
     class oxfordCO(templateWin):
         """
@@ -78,10 +80,14 @@ class Pages:
         def __init__(self, stdscr) -> None:
             #screen 
             self.scr = stdscr
-            self.maxY = self.scr.getmaxyx()[0]
-            self.maxX = self.scr.getmaxyx()[1]
+            self.maxY, self.maxX = self.scr.getmaxyx()
             self.midX = self.maxX//2
             curses.start_color()
+        
+        def scrSizeUpdater(self):
+            self.scr.addstr('working on..\n')
+            self.maxY, self.maxX = self.scr.getmaxyx()
+            self.winSizeUpdate()
 
     class mainMenu(templatePage):
         def __init__(self, stdscr) -> None:
@@ -114,53 +120,53 @@ class Pages:
             self.scr.refresh()
 
     class mainPage(templatePage):
-        def __init__(self, stdscr) -> None:
-            # defult scr
-            super().__init__(stdscr)
-            # mainDic scr - Cam
-            self.mainDicY = 1
-            self.mainDicX = 1
-            self.mainheight = self.maxY-self.mainDicY - 1
-            self.mainwidth = self.midX-self.mainDicX
-            self.mainDic = Windows.cambridgeDIC(self.mainheight, self.mainwidth, self.mainDicY, self.mainDicX)
-            self.mainDicScr = self.mainDic.scr
-            # secondDic scr - coll
-            self.secDicY = 1
-            self.secDicX = self.midX 
-            self.secheight = self.maxY-self.secDicY - 1 
-            self.secwidth = self.maxX-self.secDicX -1
-            self.secDic = Windows.oxfordCO(self.secheight, self.secwidth, self.secDicY, self.secDicX)
-            # top right information
-            self.info = " Own Dic. V1 "
-            self.infoY = 0
-            self.infoX = self.maxX//20
+        def winSizeUpdate(self):
+            #mainDic scr - Cambridge
+            self.mainDictY = 1
+            self.mainDictX = 1
+            self.mainheight = self.maxY-self.mainDictY - 1
+            self.mainwidth = self.midX-self.mainDictX
+            self.mainDict = Windows.cambridgeDict(self.mainheight, self.mainwidth, self.mainDictY, self.mainDictX)
+            # secondDic scr - oxford collocation Dict
+            self.secDictY = 1
+            self.secDictX = self.midX 
+            self.secheight = self.maxY-self.secDictY - 1 
+            self.secwidth = self.maxX-self.secDictX -1
+            self.secDict = Windows.oxfordCO(self.secheight, self.secwidth, self.secDictY, self.secDictX) 
             # searchBar
             self.comY = self.maxY - 1
             self.comX = 0
             self.comheight = 1
-            self.comwidth = self.maxX 
-            self.com = Windows.searchBar(self.comheight, self.comwidth, self.comY , self.comX, self.mainDic)
-            curses.init_pair(1, curses.COLOR_WHITE, curses.COLOR_GREEN)
+            self.comwidth = self.maxX
+            self.com = Windows.searchBar(self.comheight, self.comwidth, self.comY , self.comX, [self.mainDict])
             self.com.scr.bkgd(' ', curses.color_pair(1))
+            # top right information
+            self.infoY = 0
+            self.infoX = self.maxX//20
 
-        def debug(self, char):
-            self.mainDicScr.scr.addstr(chr(char))
-            self.mainDicScr.scr.refresh()
+            self.mainDict.scr.addstr("Done resizing screen !! ")
 
-        def draw(self):
+        def __init__(self, stdscr) -> None:
+            # defult scr
+            super().__init__(stdscr)
+            self.winSizeUpdate()
+            # top right information
+            self.info = " Own Dict. V1 "
+            # searchBar color 
+            curses.init_pair(1, curses.COLOR_WHITE, curses.COLOR_GREEN)
+
+        def initDraw(self):
             self.scr.clear()
             self.scr.border()
             # info
             self.scr.addstr(self.infoY, self.infoX, self.info)
             self.scr.refresh()
 
-            self.com.scr.addstr(' > ' + 'searchBar')
+            # searchbar
+            self.com.update()
             self.com.scr.refresh()
-
-            # self.mainDic.border()
-            # self.mainDic.refresh()
-            # self.secDic.border()
-            # self.secDic.refresh()
         
         def update(self, char):
+            self.scr.refresh()
             self.com.input(char)
+            

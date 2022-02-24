@@ -10,6 +10,8 @@ class Main:
         self.layout = Pages.mainPage(self.stdscr)
         self.focus = 'mainScr'
         self.lastFocus = 'mainScr'
+        
+        self.height, self.width = self.stdscr.getmaxyx()
 
         # Curses setup
         curses.curs_set(0)
@@ -21,7 +23,7 @@ class Main:
             self.lastFocus = self.focus
             self.focus = focus
 
-        if char != None:
+        if char != -1:
             if char == ord(':') and self.focus != 'com':
                 changeFocus('com')
             elif char == 27 :
@@ -52,13 +54,19 @@ class Main:
 
         self.stdscr.nodelay(True)
 
-        self.layout.draw()
+        self.layout.initDraw()
 
         while(not self.willExit):
+            if (self.height, self.width) != self.stdscr.getmaxyx():
+                self.height, self.width = self.stdscr.getmaxyx() 
+                # screen resize
+                self.layout.scrSizeUpdater()
+                self.layout.initDraw()
+
             try :
                 self.keyPress(self.stdscr.getch())
             except:
-                self.keyPress(None)
+                self.keyPress(-1)
 
             # limit fps to save cpu usages
             curses.napms(10)
