@@ -57,9 +57,11 @@ class Main:
         self.layout.initDraw()
 
         while(not self.willExit):
+            # with open('log.txt', 'a') as f:
+            #     f.write(f'{self.stdscr.getmaxyx()[0]} - {self.stdscr.getmaxyx()[1]}\n')
+            
             if (self.height, self.width) != self.stdscr.getmaxyx():
-                self.height, self.width = self.stdscr.getmaxyx() 
-                # screen resize
+                self.height, self.width = self.stdscr.getmaxyx()
                 self.layout.scrSizeUpdater()
                 self.layout.initDraw()
 
@@ -68,15 +70,20 @@ class Main:
             except:
                 self.keyPress(-1)
 
+            self.stdscr.refresh()
             # limit fps to save cpu usages
             curses.napms(10)
-                    
-    
-
-def main():
-    stdscr = curses.initscr()
+            
+def run(stdscr):
     Run = Main(stdscr)
     Run.main()
+
+def main():
+    #
+    # stdscr = curses.initscr()
+    # Run = Main(stdscr)
+    # Run.main()
+    curses.wrapper(run)
 
 if __name__ == '__main__':
     main()

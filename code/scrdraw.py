@@ -11,10 +11,12 @@ class Windows:
             return self.scrUpdate
         
         def resize(self, height, width, startY, startX):
-            # close old window and start the new one that fits new size
-            self.scr.close()
-            self.scr = curses.newwin(height, width, startY, startX)
+            # move and resize old window 
+            self.scr.mvwin(startY, startX)
+            self.scr.resize(height, width)    
 
+            self.scr.border()
+            self.scr.refresh()        
 
     class searchBar(templateWin):
         def __init__(self, height, width, startY, startX, dicts:list) -> None:
@@ -26,6 +28,7 @@ class Windows:
             super().__init__(height, width, startY, startX)
             self.dicts = dicts
             self.buf = ''  
+            self.scr.bkgd(' ', curses.color_pair(1))
 
         def buffer(self, char):
             if char == 10 : # Enter
@@ -85,9 +88,9 @@ class Pages:
             curses.start_color()
         
         def scrSizeUpdater(self):
-            self.scr.addstr('working on..\n')
             self.maxY, self.maxX = self.scr.getmaxyx()
             self.winSizeUpdate()
+            self.allWinResize()
 
     class mainMenu(templatePage):
         def __init__(self, stdscr) -> None:
@@ -126,30 +129,33 @@ class Pages:
             self.mainDictX = 1
             self.mainheight = self.maxY-self.mainDictY - 1
             self.mainwidth = self.midX-self.mainDictX
-            self.mainDict = Windows.cambridgeDict(self.mainheight, self.mainwidth, self.mainDictY, self.mainDictX)
             # secondDic scr - oxford collocation Dict
             self.secDictY = 1
             self.secDictX = self.midX 
             self.secheight = self.maxY-self.secDictY - 1 
-            self.secwidth = self.maxX-self.secDictX -1
-            self.secDict = Windows.oxfordCO(self.secheight, self.secwidth, self.secDictY, self.secDictX) 
+            self.secwidth = self.maxX-self.secDictX -1 
             # searchBar
             self.comY = self.maxY - 1
             self.comX = 0
             self.comheight = 1
             self.comwidth = self.maxX
-            self.com = Windows.searchBar(self.comheight, self.comwidth, self.comY , self.comX, [self.mainDict])
-            self.com.scr.bkgd(' ', curses.color_pair(1))
             # top right information
             self.infoY = 0
             self.infoX = self.maxX//20
-
-            self.mainDict.scr.addstr("Done resizing screen !! ")
+        
+        def allWinResize(self):
+            self.mainDict.resize(self.mainheight, self.mainwidth, self.mainDictY, self.mainDictX)
+            self.secDict.resize(self.secheight, self.secwidth, self.secDictY, self.secDictX)
+            self.com.resize(self.comheight, self.comwidth, self.comY, self.comX)
 
         def __init__(self, stdscr) -> None:
             # defult scr
             super().__init__(stdscr)
             self.winSizeUpdate()
+            # setupwindows
+            self.mainDict = Windows.cambridgeDict(self.mainheight, self.mainwidth, self.mainDictY, self.mainDictX)
+            self.secDict = Windows.oxfordCO(self.secheight, self.secwidth, self.secDictY, self.secDictX)
+            self.com = Windows.searchBar(self.comheight, self.comwidth, self.comY , self.comX, [self.mainDict])
             # top right information
             self.info = " Own Dict. V1 "
             # searchBar color 
@@ -161,7 +167,6 @@ class Pages:
             # info
             self.scr.addstr(self.infoY, self.infoX, self.info)
             self.scr.refresh()
-
             # searchbar
             self.com.update()
             self.com.scr.refresh()
