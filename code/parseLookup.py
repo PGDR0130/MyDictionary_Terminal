@@ -22,7 +22,9 @@ def cambridge(word):
 
     def getAllDefBlock(dict):
         """
-        All block with definition (EN, CH) and example sentence
+        All block with definition (EN, CH) and example sentences (EN, CH)
+
+        return the hole definition block  
         """
         allDef = dict.findAll('div', 'def-block ddef_block')
         return allDef
@@ -36,20 +38,40 @@ def cambridge(word):
         block = getAllDefBlock(dict)
         defs = []
         for i in block :
+            # find translated difinition in evey blocks
             defs.append(i.find('span', 'trans dtrans dtrans-se break-cj').text)
         print(defs)
     
     def getAllExamp():
+        """
+        get all example sentences, Both English and Chinese
+        """
         block = getAllDefBlock(dict)
-        difdef = [] # different definition block
+        difexamps = [] # two dimensional array, the inner list contains same def example
         for examp_block in block :
-            difdef.append(examp_block.findAll('div', 'examp dexamp'))
+            # find all sentences in the same def block
+            # all examp sentences in the same block have the same def 
+            difexamps.append(examp_block.findAll('div', 'examp dexamp'))
         
-        for difdef in difdef:
-            for examp in difdef:
-                exampCH = examp.find('span' ,'trans dtrans dtrans-se hdb break-cj').text
-                print(exampCH)
-            print('------------------')
+        def CH():
+            for samexamps in difexamps:
+                # loop throught difexamps to get the same def example sentence in list
+                print('--------------')
+                for exblock in samexamps:
+                    # loop through samexamp to get the same def examp
+                    exampCH = exblock.find('span' ,'trans dtrans dtrans-se hdb break-cj').text
+                    print(exampCH)
+        def EN():
+            for samexamps in difexamps:
+                print('--------------')
+                for exblock in samexamps:
+                   examp = exblock.find('span', 'eg deg')
+                   
+
+                
+        
+        
+
 
     # Small Block
     # old 
