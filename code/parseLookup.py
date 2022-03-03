@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup, NavigableString
-import requests
+import requests, time
 
 headers = {'User-Agent':'Mozilla/5.0 (Windows NT 6.0; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0'}
 url = 'https://dictionary.cambridge.org/dictionary/english-chinese-traditional/'
@@ -40,7 +40,7 @@ def cambridge(word):
         for i in block :
             # find translated difinition in evey blocks
             defs.append(i.find('span', 'trans dtrans dtrans-se break-cj').text)
-        print(defs)
+        return defs
     
     def getAllExamp():
         """
@@ -57,18 +57,23 @@ def cambridge(word):
             """
             get Chinese example sentence 
             """
+            currentdef = 0 
+            examplist = []
             for samexamps in difexamps:
+                examplist.append(list())
                 # loop throught difexamps to get the same def example sentence in list
                 print('--------------')
                 for exblock in samexamps:
                     # loop through samexamp to get the same def examp
-                    exampCH = exblock.find('span' ,'trans dtrans dtrans-se hdb break-cj').text
-                    print(exampCH)
+                    examp = exblock.find('span' ,'trans dtrans dtrans-se hdb break-cj').text
+                    examplist[currentdef].append(examp)
+                currentdef += 1
+            return examplist
         
         def EN():
             """
             get English examp sentence
-            ( need more resources due to looping 'span')
+            ( need more resources due to looping through 'span')
             """
             currentsen, currentdef = 0, 0
             examplist = []
@@ -87,12 +92,16 @@ def cambridge(word):
                             examplist[currentdef][currentsen] += part.text
                     currentsen += 1
                 currentdef += 1; currentsen = 0 
+            return examplist
 
-            for i in examplist:
-                for k in i:
-                    print(k)
-                   
-        EN()
+        ENexamp, CHexamp = EN(), CH()
+        for i in range(len(ENexamp)):
+            print('-----')
+            for k in range(len(ENexamp[i])):
+                print(ENexamp[i][k])
+                print(CHexamp[i][k])
+                print('')
+
                 
         
         
@@ -120,5 +129,6 @@ def cambridge(word):
     getAllDef()
     getAllExamp()
 
-
+first = time.time()
 cambridge('gain')
+print(time.time() - first)
