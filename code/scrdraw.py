@@ -1,4 +1,5 @@
 import curses
+import parseLookup
 
 class Windows:
     class templateWin:
@@ -62,9 +63,16 @@ class Windows:
             self.word = ''
 
         def updateWord(self, word):
-            self.word = word
-            self.scr.addstr(self.word + '\n')
-            self.scr.refresh()         
+            definition,enexamp, chexamp = parseLookup.cambridge(word)
+            for i in range(len(enexamp)):
+                self.scr.addstr(definition[i] + '\n')
+                for k in range(len(enexamp[i])):    
+                    self.scr.addstr('> '+enexamp[i][k] + '\n')
+                    self.scr.addstr('  '+chexamp[i][k] + '\n')
+                    self.scr.addstr('\n')
+                    self.scr.refresh()
+            self.scr.refresh()
+
 
     class oxfordCO(templateWin):
         """

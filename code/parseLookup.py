@@ -62,7 +62,6 @@ def cambridge(word):
             for samexamps in difexamps:
                 examplist.append(list())
                 # loop throught difexamps to get the same def example sentence in list
-                print('--------------')
                 for exblock in samexamps:
                     # loop through samexamp to get the same def examp
                     examp = exblock.find('span' ,'trans dtrans dtrans-se hdb break-cj').text
@@ -93,18 +92,11 @@ def cambridge(word):
                     currentsen += 1
                 currentdef += 1; currentsen = 0 
             return examplist
-
-        ENexamp, CHexamp = EN(), CH()
-        for i in range(len(ENexamp)):
-            print('-----')
-            for k in range(len(ENexamp[i])):
-                print(ENexamp[i][k])
-                print(CHexamp[i][k])
-                print('')
-
-                
         
-        
+        return EN(), CH()
+
+    result = getAllExamp()
+    return getAllDef() ,result[0], result[1]
 
 
     # Small Block
@@ -114,21 +106,8 @@ def cambridge(word):
         PartOfSpeech = dict.find('span', 'pos dpos').text
         print(PartOfSpeech)
 
-    def find_meaning(dict):
-        Meaning = dict.find('span', 'trans dtrans dtrans-se break-cj').text
-        print(Meaning)
-
     def find_more(dict):
         more = dict.findAll('span', 'trans dtrans dtrans-se break-cj')
         for i in more:
             print(i.text)
     """
-
-    # find_PartOfSpeech(dict)
-    # find_more(dict)
-    getAllDef()
-    getAllExamp()
-
-first = time.time()
-cambridge('gain')
-print(time.time() - first)
