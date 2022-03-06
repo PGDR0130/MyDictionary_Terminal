@@ -1,10 +1,14 @@
 import curses
+from turtle import width
 import parseLookup
+import time
 
 class Windows:
     class templateWin:
         def __init__(self, height, width, startY, startX) -> None:
             self.scr = curses.newwin(height, width,startY, startX)
+            self.height = height
+            self.width = width
             # Need screen update check
             self.scrUpdate = False
 
@@ -17,7 +21,17 @@ class Windows:
             self.scr.resize(height, width)    
 
             self.scr.border()
-            self.scr.refresh()        
+            self.scr.refresh()     
+
+        def forceClear(self):
+            """
+            The normal clear() and erase() methond couldnt clear chinese word properly,
+            due to the difference of the width between Chinese characters and English characters
+            this is going to cover the previous rendered characters to blank.
+            """
+            self.scr.move(0, 0)
+            for i in range(self.height - 10):
+                self.scr.addstr(i,0, '  '*self.width)
 
     class searchBar(templateWin):
         def __init__(self, height, width, startY, startX, dicts:list) -> None:
@@ -62,15 +76,17 @@ class Windows:
             super().__init__(height, width, startY, startX)
             self.word = ''
 
-        def updateWord(self, word):
-            definition,enexamp, chexamp = parseLookup.cambridge(word)
+        def updateWord(self, word): 
+            self.forceClear()
+            self.scr.refresh()
+            definition, enexamp, chexamp = parseLookup.cambridge(word)
+            self.scr.move(0, 0)
             for i in range(len(enexamp)):
                 self.scr.addstr(definition[i] + '\n')
                 for k in range(len(enexamp[i])):    
                     self.scr.addstr('> '+enexamp[i][k] + '\n')
-                    self.scr.addstr('  '+chexamp[i][k] + '\n')
+                    self.scr.addstr('  '+chexamp[i][k] + '\n' )
                     self.scr.addstr('\n')
-                    self.scr.refresh()
             self.scr.refresh()
 
 
@@ -180,6 +196,5 @@ class Pages:
             self.com.scr.refresh()
         
         def update(self, char):
-            self.scr.refresh()
             self.com.input(char)
             

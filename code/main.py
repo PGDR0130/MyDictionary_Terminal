@@ -1,5 +1,6 @@
 import curses
 from scrdraw import Pages
+import time 
 
 class Main:
     def __init__(self, stdscr) -> None:
@@ -43,7 +44,7 @@ class Main:
                     self.willExit = True 
                 else:
                     self.layout.update(char)
-
+                    
             elif self.focus == 'secScr':
                 if char == ord('q'):
                     pass
@@ -60,17 +61,16 @@ class Main:
             # with open('log.txt', 'a') as f:
             #     f.write(f'{self.stdscr.getmaxyx()[0]} - {self.stdscr.getmaxyx()[1]}\n')
             
-            if (self.height, self.width) != self.stdscr.getmaxyx():
-                self.height, self.width = self.stdscr.getmaxyx()
-                self.layout.scrSizeUpdater()
-                self.layout.initDraw()
+            # if (self.height, self.width) != self.stdscr.getmaxyx():
+            #     self.height, self.width = self.stdscr.getmaxyx()
+            #     self.layout.scrSizeUpdater()
+            #     self.layout.initDraw()
 
             try :
                 self.keyPress(self.stdscr.getch())
             except:
                 self.keyPress(-1)
 
-            self.stdscr.refresh()
             # limit fps to save cpu usages
             curses.napms(10)
             
@@ -79,11 +79,11 @@ def run(stdscr):
     Run.main()
 
 def main():
-    #
-    # stdscr = curses.initscr()
-    # Run = Main(stdscr)
-    # Run.main()
-    curses.wrapper(run)
+    
+    stdscr = curses.initscr()
+    Run = Main(stdscr)
+    Run.main()
+    # curses.wrapper(run)
 
 if __name__ == '__main__':
     main()
