@@ -1,7 +1,7 @@
 import curses
 from turtle import width
 import parseLookup
-import time
+import wcwidth 
 
 class Windows:
     class templateWin:
@@ -28,10 +28,22 @@ class Windows:
             The normal clear() and erase() methond couldnt clear chinese word properly,
             due to the difference of the width between Chinese characters and English characters
             this is going to cover the previous rendered characters to blank.
+
+            Notice : can't cover things up with space!!
             """
             self.scr.move(0, 0)
-            for i in range(self.height - 10):
-                self.scr.addstr(i,0, '  '*self.width)
+            for i in range(self.height - 1):
+                self.scr.addstr(i,0, '_'*self.width)
+                self.scr.refresh()
+                self.scr.clear()
+                self.scr.addstr(self.height//2, self.width//2 - len('Loading...')//2, 'Loading...')
+               
+        def addchstr(self, str):
+            """
+            use for printing Chinese characters
+            """
+            self.scr.addstr(str.ljust(len(str), ' '))
+         
 
     class searchBar(templateWin):
         def __init__(self, height, width, startY, startX, dicts:list) -> None:
@@ -78,15 +90,15 @@ class Windows:
 
         def updateWord(self, word): 
             self.forceClear()
-            self.scr.refresh()
-            definition, enexamp, chexamp = parseLookup.cambridge(word)
+            definition, enexamp, chexamp = parseLookup.cambridge(word)  
+            self.scr.clear()
             self.scr.move(0, 0)
             for i in range(len(enexamp)):
-                self.scr.addstr(definition[i] + '\n')
+                self.addchstr(definition[i] + '\n')
                 for k in range(len(enexamp[i])):    
-                    self.scr.addstr('> '+enexamp[i][k] + '\n')
-                    self.scr.addstr('  '+chexamp[i][k] + '\n' )
-                    self.scr.addstr('\n')
+                    self.addchstr('> '+enexamp[i][k] + '\n')
+                    self.addchstr('  '+chexamp[i][k] + '\n' )
+                    self.addchstr('\n')
             self.scr.refresh()
 
 
