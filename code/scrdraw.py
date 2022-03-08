@@ -1,7 +1,5 @@
 import curses
-from turtle import width
 import parseLookup
-import wcwidth 
 
 class Windows:
     class templateWin:
@@ -93,14 +91,16 @@ class Windows:
             definition, enexamp, chexamp = parseLookup.cambridge(word)  
             self.scr.clear()
             self.scr.move(0, 0)
-            for i in range(len(enexamp)):
-                self.addchstr(definition[i] + '\n')
-                for k in range(len(enexamp[i])):    
-                    self.addchstr('> '+enexamp[i][k] + '\n')
-                    self.addchstr('  '+chexamp[i][k] + '\n' )
-                    self.addchstr('\n')
+            if not not definition:
+                for i in range(len(enexamp)):
+                    self.addchstr(definition[i] + '\n')
+                    for k in range(len(enexamp[i])):    
+                        self.addchstr('> '+enexamp[i][k] + '\n')
+                        self.addchstr('  '+chexamp[i][k] + '\n' )
+                    self.addchstr('<>-<>-<>-<>-<>-<>-<>-<>-<>-<>-<>\n')
+            else :
+                self.addchstr(self.height//2, self.width-len('No words found')//2,'No words found')
             self.scr.refresh()
-
 
     class oxfordCO(templateWin):
         """

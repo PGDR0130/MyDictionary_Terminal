@@ -1,3 +1,4 @@
+from asyncio.windows_events import NULL
 from bs4 import BeautifulSoup, NavigableString
 import requests, time
 
@@ -27,8 +28,9 @@ def cambridge(word):
         return the hole definition block  
         """
         allDef = dict.findAll('div', 'def-block ddef_block')
+        if not allDef :
+            return None
         return allDef
-
 
     # middle
     def getAllDef():
@@ -47,6 +49,7 @@ def cambridge(word):
         get all example sentences, Both English and Chinese are possible
         """
         block = getAllDefBlock(dict)
+        if block == None: return [], [], []
         difexamps = [] # two dimensional array, the inner list contains same def example
         for examp_block in block :
             # find all sentences in the same def block
