@@ -1,0 +1,5 @@
+2022-03-12 16:33:55,259:root -> Application starting
+2022-03-12 16:33:57,661:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-03-12 16:33:58,278:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/sdfsdf HTTP/1.1" 302 0
+2022-03-12 16:33:58,518:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/ HTTP/1.1" 200 None
+2022-03-12 16:33:58,565:parseLookup -> No body found

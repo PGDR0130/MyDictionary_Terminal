@@ -1,9 +1,16 @@
 import curses
 from scrdraw import Pages
-import time 
+import logging
 
 class Main:
+    def loggerSetup(self):
+        logging.basicConfig(filename='log.log', level=logging.DEBUG, 
+                            format='%(asctime)s:%(name)s -> %(message)s')
+
     def __init__(self, stdscr) -> None:
+        self.loggerSetup()
+        logging.info('Application starting')
+
         self.stdscr = stdscr
         self.willExit = False
 

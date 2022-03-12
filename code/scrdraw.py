@@ -1,5 +1,8 @@
 import curses
 import parseLookup
+import logging
+
+logging = logging.getLogger(__name__)
 
 class Windows:
     class templateWin:
@@ -85,11 +88,16 @@ class Windows:
         def __init__(self, height, width, startY, startX) -> None:
             super().__init__(height, width, startY, startX)
             self.word = ''
+            self.dict = parseLookup.cambridge()
 
         def updateWord(self, word): 
             self.forceClear()
-            definition, enexamp, chexamp = parseLookup.cambridge(word)  
+            if self.dict.updateWord(word) == False:
+                logging.warning(f"Couldn't find info for {word}")
+                return False
+            definition, enexamp, chexamp = self.dict.getinfo()
             self.scr.clear()
+            self.scr.refresh()
             self.scr.move(0, 0)
             if not not definition:
                 for i in range(len(enexamp)):
@@ -101,6 +109,7 @@ class Windows:
             else :
                 self.addchstr(self.height//2, self.width-len('No words found')//2,'No words found')
             self.scr.refresh()
+            logging.info('Successfully display new word')
 
     class oxfordCO(templateWin):
         """
