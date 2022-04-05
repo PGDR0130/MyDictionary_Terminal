@@ -73,10 +73,7 @@ class Main:
             #     self.layout.scrSizeUpdater()
             #     self.layout.initDraw()
 
-            try :
-                self.keyPress(self.stdscr.getch())
-            except:
-                self.keyPress(-1)
+            self.keyPress(self.stdscr.getch())
 
             # limit fps to save cpu usages
             curses.napms(10)

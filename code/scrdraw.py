@@ -26,9 +26,9 @@ class Windows:
 
         def forceClear(self):
             """
-            The normal clear() and erase() methond couldnt clear chinese word properly,
+            clear() and erase() methond couldnt clear chinese word properly,
             due to the difference of the width between Chinese characters and English characters
-            this is going to cover the previous rendered characters to blank.
+            this is going to cover the previous rendered characters and clear it to blank.
 
             Notice : can't cover things up with space!!
             """
@@ -38,12 +38,6 @@ class Windows:
                 self.scr.refresh()
                 self.scr.clear()
                 self.scr.addstr(self.height//2, self.width//2 - len('Loading...')//2, 'Loading...')
-               
-        def addchstr(self, str):
-            """
-            use for printing Chinese characters
-            """
-            self.scr.addstr(str.ljust(len(str), ' '))
          
 
     class searchBar(templateWin):
@@ -63,6 +57,7 @@ class Windows:
                 for dict in self.dicts:
                     dict.updateWord(self.buf)
                 # clear buffer
+                logging.debug('push update word to dicts')
                 self.buf = '' 
             elif char == 8: # Backspace
                 self.buf = self.buf[:-1]
@@ -87,29 +82,26 @@ class Windows:
         """
         def __init__(self, height, width, startY, startX) -> None:
             super().__init__(height, width, startY, startX)
-            self.word = ''
-            self.dict = parseLookup.cambridge()
 
         def updateWord(self, word): 
+            logging.debug(f'{self.__class__} updating word')
             self.forceClear()
-            if self.dict.updateWord(word) == False:
-                logging.warning(f"Couldn't find info for {word}")
-                return False
-            definition, enexamp, chexamp = self.dict.getinfo()
+            definition, enexamp, chexamp = parseLookup.cambridge(word)
+            logging.info(f'{self.__class__} get info successfully')    
             self.scr.clear()
             self.scr.refresh()
             self.scr.move(0, 0)
             if not not definition:
                 for i in range(len(enexamp)):
-                    self.addchstr(definition[i] + '\n')
+                    self.scr.addstr(definition[i] + '\n')
                     for k in range(len(enexamp[i])):    
-                        self.addchstr('> '+enexamp[i][k] + '\n')
-                        self.addchstr('  '+chexamp[i][k] + '\n' )
-                    self.addchstr('<>-<>-<>-<>-<>-<>-<>-<>-<>-<>-<>\n')
+                        self.scr.addstr('> '+enexamp[i][k] + '\n')
+                        self.scr.addstr('  '+chexamp[i][k] + '\n' )
+                    self.scr.addstr('<>-<>-<>-<>-<>-<>-<>-<>-<>-<>-<>\n')
             else :
                 self.addchstr(self.height//2, self.width-len('No words found')//2,'No words found')
             self.scr.refresh()
-            logging.info('Successfully display new word')
+            logging.info(f'Successfully display new word "{word}" ')
 
     class oxfordCO(templateWin):
         """
@@ -121,6 +113,10 @@ class Windows:
         def __init__(self, height, width, startY, startX) -> None:
             super().__init__(height, width, startY, startX)
             self.word = ''
+        
+        def updateWord(self, word):
+            self.forceClear()
+
 
 
 class Pages:
