@@ -1,5 +1,5 @@
 import curses
-import parseLookup
+import wordLookUp
 import logging
 
 logging = logging.getLogger(__name__)

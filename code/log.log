@@ -178,3 +178,76 @@
 2022-04-04 18:12:51,452:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
 2022-04-04 18:12:52,269:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/fly HTTP/1.1" 200 None
 2022-04-04 18:12:52,523:scrdraw -> <class 'scrdraw.Windows.cambridgeDict'> get info successfully
+2022-04-24 17:47:22,756:root -> Application starting
+2022-04-24 17:47:37,927:scrdraw -> <class 'scrdraw.Windows.cambridgeDict'> updating word
+2022-04-24 17:47:37,934:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-24 17:47:38,682:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/distribute HTTP/1.1" 200 None
+2022-04-24 17:47:38,746:scrdraw -> <class 'scrdraw.Windows.cambridgeDict'> get info successfully
+2022-04-24 17:47:38,747:scrdraw -> Successfully display new word "distribute" 
+2022-04-24 17:47:38,747:scrdraw -> push update word to dicts
+2022-04-24 17:49:48,080:scrdraw -> <class 'scrdraw.Windows.cambridgeDict'> updating word
+2022-04-24 17:49:48,086:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-24 17:49:48,928:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/leftover HTTP/1.1" 200 None
+2022-04-24 17:49:48,973:scrdraw -> <class 'scrdraw.Windows.cambridgeDict'> get info successfully
+2022-04-24 17:49:48,974:scrdraw -> Successfully display new word "leftover" 
+2022-04-24 17:49:48,974:scrdraw -> push update word to dicts
+2022-04-24 17:51:34,014:scrdraw -> <class 'scrdraw.Windows.cambridgeDict'> updating word
+2022-04-24 17:51:34,018:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-24 17:51:35,017:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/endure HTTP/1.1" 200 None
+2022-04-24 17:51:35,080:scrdraw -> <class 'scrdraw.Windows.cambridgeDict'> get info successfully
+2022-04-24 17:51:35,081:scrdraw -> Successfully display new word "endure" 
+2022-04-24 17:51:35,081:scrdraw -> push update word to dicts
+2022-04-24 17:55:04,946:scrdraw -> <class 'scrdraw.Windows.cambridgeDict'> updating word
+2022-04-24 17:55:04,952:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-24 17:55:05,656:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/ok HTTP/1.1" 200 None
+2022-04-24 17:55:05,774:scrdraw -> <class 'scrdraw.Windows.cambridgeDict'> get info successfully
+2022-04-24 17:55:05,777:scrdraw -> Successfully display new word "ok" 
+2022-04-24 17:55:05,778:scrdraw -> push update word to dicts
+2022-04-24 17:55:17,359:scrdraw -> <class 'scrdraw.Windows.cambridgeDict'> updating word
+2022-04-24 17:55:17,365:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-24 17:55:17,974:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/yyy HTTP/1.1" 302 0
+2022-04-24 17:55:18,249:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/ HTTP/1.1" 200 None
+2022-04-24 17:55:18,285:parseLookup -> No body found
+2022-04-27 22:37:18,467:root -> Application starting
+2022-04-27 22:37:20,789:scrdraw -> <class 'scrdraw.Windows.cambridgeDict'> updating word
+2022-04-27 22:37:20,789:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-27 22:37:23,258:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/slip HTTP/1.1" 200 None
+2022-04-27 22:37:23,321:scrdraw -> <class 'scrdraw.Windows.cambridgeDict'> get info successfully
+2022-04-27 22:37:23,321:scrdraw -> Successfully display new word "slip" 
+2022-04-27 22:37:23,321:scrdraw -> push update word to dicts
+2022-04-27 22:38:38,858:scrdraw -> <class 'scrdraw.Windows.cambridgeDict'> updating word
+2022-04-27 22:38:38,858:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-27 22:38:39,643:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/seal HTTP/1.1" 200 None
+2022-04-27 22:38:39,722:scrdraw -> <class 'scrdraw.Windows.cambridgeDict'> get info successfully
+2022-04-27 22:38:39,722:scrdraw -> Successfully display new word "seal" 
+2022-04-27 22:38:39,722:scrdraw -> push update word to dicts
+2022-04-27 22:39:17,575:scrdraw -> <class 'scrdraw.Windows.cambridgeDict'> updating word
+2022-04-27 22:39:17,576:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-27 22:39:18,581:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/recruit HTTP/1.1" 200 None
+2022-04-27 22:39:26,347:root -> Application starting
+2022-04-27 22:39:33,566:scrdraw -> <class 'scrdraw.Windows.cambridgeDict'> updating word
+2022-04-27 22:39:33,566:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-27 22:39:34,521:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/recruit HTTP/1.1" 200 None
+2022-04-27 23:07:05,930:root -> Application starting
+2022-04-27 23:10:11,953:root -> Application starting
+2022-04-27 23:10:14,177:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-04-27 23:15:38,441:root -> Application starting
+2022-04-27 23:15:41,304:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-04-27 23:15:41,304:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-27 23:15:42,139:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/hello HTTP/1.1" 200 None
+2022-04-27 23:15:42,202:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-04-27 23:15:42,205:scrdraw.contentWindow -> Successfully display new word "hello" 
+2022-04-27 23:15:42,205:scrdraw.contentWindow -> push update word to dicts
+2022-04-27 23:16:44,302:root -> Application starting
+2022-04-27 23:16:47,080:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-04-27 23:16:47,080:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-27 23:16:48,079:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/hello HTTP/1.1" 200 None
+2022-04-27 23:16:48,157:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-04-27 23:16:48,157:scrdraw.contentWindow -> Successfully display new word "hello" 
+2022-04-27 23:16:48,157:scrdraw.contentWindow -> push update word to dicts
+2022-04-27 23:16:51,444:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-04-27 23:16:51,444:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-27 23:16:52,122:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/ok HTTP/1.1" 200 None
+2022-04-27 23:16:52,232:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-04-27 23:16:52,232:scrdraw.contentWindow -> Successfully display new word "ok" 
+2022-04-27 23:16:52,232:scrdraw.contentWindow -> push update word to dicts

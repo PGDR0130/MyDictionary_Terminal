@@ -1,9 +1,5 @@
-from aiohttp import request
 from bs4 import BeautifulSoup, NavigableString
-from cv2 import mean
 import requests, logging
-
-from sympy import block_collapse
 
 logging = logging.getLogger(__name__)
 

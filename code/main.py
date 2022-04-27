@@ -1,5 +1,5 @@
 import curses
-from scrdraw import Pages
+from scrdraw import pages
 import logging
 
 class Main:
@@ -14,8 +14,9 @@ class Main:
         self.stdscr = stdscr
         self.willExit = False
 
-        self.Menu = Pages.mainMenu(self.stdscr)
-        self.layout = Pages.mainPage(self.stdscr)
+        self.Menu = pages.mainMenu(self.stdscr)
+        self.layout = pages.mainPage(self.stdscr)
+        # idicate which window the user is using
         self.focus = 'mainScr'
         self.lastFocus = 'mainScr'
         
