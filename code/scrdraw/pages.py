@@ -79,7 +79,7 @@ class mainPage(templatePage):
         # setupwindows
         self.mainDict = contentWindow.cambridgeDict(self.mainheight, self.mainwidth, self.mainDictY, self.mainDictX)
         self.secDict = contentWindow.oxfordCO(self.secheight, self.secwidth, self.secDictY, self.secDictX)
-        self.com = contentWindow.searchBar(self.comheight, self.comwidth, self.comY , self.comX, [self.mainDict])
+        self.com = contentWindow.searchBar(self.comheight, self.comwidth, self.comY , self.comX, [self.secDict])
         # top right information
         self.info = " Own Dict. V1 "
         # searchBar color 

@@ -2,6 +2,7 @@
 import curses
 import logging
 from wordLookUp.cambridge import cambridgeFind
+from wordLookUp.oxford import oxfordCollFind
 
 
 logging = logging.getLogger(__name__)
@@ -114,9 +115,17 @@ class oxfordCO(templateWin):
     """
     def __init__(self, height, width, startY, startX) -> None:
         super().__init__(height, width, startY, startX)
-        self.word = ''
     
     def updateWord(self, word):
         self.forceClear()
+        self.scr.clear()
+        a = oxfordCollFind(word)
+        # self.scr.addstr(a[0][0])
+        # self.scr.addstr(a[0][1])
+        for difPOS in oxfordCollFind(word):
+            for samPos in difPOS:
+                self.scr.addstr(samPos[0])
+                self.scr.addstr(samPos[1])
+        self.scr.refresh()
 
 

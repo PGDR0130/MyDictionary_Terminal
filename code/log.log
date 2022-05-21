@@ -251,3 +251,471 @@
 2022-04-27 23:16:52,232:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
 2022-04-27 23:16:52,232:scrdraw.contentWindow -> Successfully display new word "ok" 
 2022-04-27 23:16:52,232:scrdraw.contentWindow -> push update word to dicts
+2022-04-29 23:44:37,995:root -> Application starting
+2022-04-29 23:44:40,618:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-04-29 23:44:40,619:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-29 23:44:41,427:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/hello HTTP/1.1" 200 None
+2022-04-29 23:44:41,547:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-04-29 23:44:41,556:scrdraw.contentWindow -> Successfully display new word "hello" 
+2022-04-29 23:44:41,556:scrdraw.contentWindow -> push update word to dicts
+2022-04-29 23:46:44,192:root -> Application starting
+2022-04-29 23:46:45,985:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-04-29 23:46:45,991:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-29 23:46:46,627:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/hello HTTP/1.1" 200 None
+2022-04-29 23:46:46,711:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-04-29 23:46:46,714:scrdraw.contentWindow -> Successfully display new word "hello" 
+2022-04-29 23:46:46,718:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-04-29 23:46:47,063:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word= HTTP/1.1" 301 0
+2022-04-29 23:46:47,066:urllib3.connectionpool -> Starting new HTTP connection (1): www.freecollocation.com:80
+2022-04-29 23:46:47,333:urllib3.connectionpool -> http://www.freecollocation.com:80 "GET / HTTP/1.1" 302 0
+2022-04-29 23:46:47,540:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET / HTTP/1.1" 200 None
+2022-04-29 23:48:19,422:root -> Application starting
+2022-04-29 23:48:27,246:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-04-29 23:48:27,253:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-29 23:48:27,943:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/find HTTP/1.1" 200 None
+2022-04-29 23:48:28,078:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-04-29 23:49:30,612:root -> Application starting
+2022-04-29 23:49:32,508:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-04-29 23:49:32,515:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-29 23:49:33,233:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/find HTTP/1.1" 200 None
+2022-04-29 23:49:33,311:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-04-29 23:50:29,022:root -> Application starting
+2022-04-29 23:50:30,582:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-04-29 23:50:30,589:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-29 23:50:31,294:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/find HTTP/1.1" 200 None
+2022-04-29 23:50:31,378:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-04-30 15:23:06,519:root -> Application starting
+2022-04-30 15:23:08,939:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-04-30 15:23:08,947:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-30 15:23:09,726:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/hello HTTP/1.1" 200 None
+2022-04-30 15:23:09,789:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-04-30 15:23:09,789:scrdraw.contentWindow -> Successfully display new word "hello" 
+2022-04-30 15:23:09,789:scrdraw.contentWindow -> push update word to dicts
+2022-04-30 15:23:42,646:root -> Application starting
+2022-04-30 15:23:45,686:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-04-30 15:23:45,686:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-30 15:23:46,490:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/hello HTTP/1.1" 200 None
+2022-04-30 15:23:46,538:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-04-30 15:23:46,538:scrdraw.contentWindow -> Successfully display new word "hello" 
+2022-04-30 15:23:46,553:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-04-30 15:23:46,979:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word= HTTP/1.1" 301 0
+2022-04-30 15:23:46,994:urllib3.connectionpool -> Starting new HTTP connection (1): www.freecollocation.com:80
+2022-04-30 15:23:47,291:urllib3.connectionpool -> http://www.freecollocation.com:80 "GET / HTTP/1.1" 302 0
+2022-04-30 15:23:47,527:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET / HTTP/1.1" 200 None
+2022-04-30 15:23:58,853:root -> Application starting
+2022-04-30 15:24:00,359:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-04-30 15:24:00,374:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-30 15:24:01,014:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/find HTTP/1.1" 200 None
+2022-04-30 15:24:01,203:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-04-30 15:24:09,763:root -> Application starting
+2022-04-30 15:24:11,630:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-04-30 15:24:11,631:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-30 15:24:12,194:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/ome HTTP/1.1" 302 0
+2022-04-30 15:24:12,422:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/ HTTP/1.1" 200 None
+2022-04-30 15:24:12,470:root -> No body found
+2022-04-30 15:24:14,571:root -> Application starting
+2022-04-30 15:24:16,937:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-04-30 15:24:16,937:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-30 15:24:17,612:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/come HTTP/1.1" 200 None
+2022-04-30 15:24:17,707:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-04-30 15:24:21,415:root -> Application starting
+2022-04-30 15:24:23,075:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-04-30 15:24:23,075:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-30 15:24:23,755:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/ok HTTP/1.1" 200 None
+2022-04-30 15:24:23,834:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-04-30 15:24:23,834:scrdraw.contentWindow -> Successfully display new word "ok" 
+2022-04-30 15:24:23,834:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-04-30 15:24:24,201:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word= HTTP/1.1" 301 0
+2022-04-30 15:24:24,201:urllib3.connectionpool -> Starting new HTTP connection (1): www.freecollocation.com:80
+2022-04-30 15:24:24,461:urllib3.connectionpool -> http://www.freecollocation.com:80 "GET / HTTP/1.1" 302 0
+2022-04-30 15:24:24,681:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET / HTTP/1.1" 200 None
+2022-04-30 15:25:28,711:root -> Application starting
+2022-04-30 15:25:30,058:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-04-30 15:25:30,058:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-30 15:25:30,642:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/wis HTTP/1.1" 302 0
+2022-04-30 15:25:30,933:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/ HTTP/1.1" 200 None
+2022-04-30 15:25:30,986:root -> No body found
+2022-04-30 15:25:33,130:root -> Application starting
+2022-04-30 15:25:35,321:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-04-30 15:25:35,321:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-30 15:25:36,125:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/wise HTTP/1.1" 200 None
+2022-04-30 15:25:36,221:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-04-30 15:25:36,221:scrdraw.contentWindow -> Successfully display new word "wise" 
+2022-04-30 15:25:36,221:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-04-30 15:25:36,584:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word= HTTP/1.1" 301 0
+2022-04-30 15:25:36,584:urllib3.connectionpool -> Starting new HTTP connection (1): www.freecollocation.com:80
+2022-04-30 15:25:36,855:urllib3.connectionpool -> http://www.freecollocation.com:80 "GET / HTTP/1.1" 302 0
+2022-04-30 15:25:37,083:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET / HTTP/1.1" 200 None
+2022-04-30 15:26:30,438:root -> Application starting
+2022-04-30 15:26:32,412:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-04-30 15:26:32,412:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-04-30 15:26:33,187:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/hello HTTP/1.1" 200 None
+2022-04-30 15:26:33,251:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-04-30 15:26:33,251:scrdraw.contentWindow -> Successfully display new word "hello" 
+2022-04-30 15:26:33,251:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-04-30 15:26:33,597:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word= HTTP/1.1" 301 0
+2022-04-30 15:26:33,597:urllib3.connectionpool -> Starting new HTTP connection (1): www.freecollocation.com:80
+2022-04-30 15:26:33,841:urllib3.connectionpool -> http://www.freecollocation.com:80 "GET / HTTP/1.1" 302 0
+2022-04-30 15:26:34,046:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET / HTTP/1.1" 200 None
+2022-05-01 01:22:30,976:root -> Application starting
+2022-05-01 01:22:32,705:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:22:32,707:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:22:33,379:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/hello HTTP/1.1" 200 None
+2022-05-01 01:22:33,463:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:22:33,463:scrdraw.contentWindow -> Successfully display new word "hello" 
+2022-05-01 01:22:33,475:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:22:33,955:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word= HTTP/1.1" 301 0
+2022-05-01 01:22:33,968:urllib3.connectionpool -> Starting new HTTP connection (1): www.freecollocation.com:80
+2022-05-01 01:22:34,203:urllib3.connectionpool -> http://www.freecollocation.com:80 "GET / HTTP/1.1" 302 0
+2022-05-01 01:22:34,415:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET / HTTP/1.1" 200 None
+2022-05-01 01:23:01,400:root -> Application starting
+2022-05-01 01:23:03,683:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:23:03,687:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:23:04,394:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/hello HTTP/1.1" 200 None
+2022-05-01 01:23:04,454:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:23:04,465:scrdraw.contentWindow -> Successfully display new word "hello" 
+2022-05-01 01:23:04,465:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:23:04,839:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word= HTTP/1.1" 301 0
+2022-05-01 01:23:04,839:urllib3.connectionpool -> Starting new HTTP connection (1): www.freecollocation.com:80
+2022-05-01 01:23:05,126:urllib3.connectionpool -> http://www.freecollocation.com:80 "GET / HTTP/1.1" 302 0
+2022-05-01 01:23:05,334:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET / HTTP/1.1" 200 None
+2022-05-01 01:24:36,648:root -> Application starting
+2022-05-01 01:24:40,151:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:24:40,152:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:24:41,040:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/find HTTP/1.1" 200 None
+2022-05-01 01:24:41,113:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:24:47,407:root -> Application starting
+2022-05-01 01:24:50,548:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:24:50,549:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:24:51,009:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/un HTTP/1.1" 302 0
+2022-05-01 01:24:51,282:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/the-un?q=un HTTP/1.1" 200 None
+2022-05-01 01:24:51,342:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:24:51,342:scrdraw.contentWindow -> Successfully display new word "un" 
+2022-05-01 01:24:51,342:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:24:51,739:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word= HTTP/1.1" 301 0
+2022-05-01 01:24:51,740:urllib3.connectionpool -> Starting new HTTP connection (1): www.freecollocation.com:80
+2022-05-01 01:24:52,101:urllib3.connectionpool -> http://www.freecollocation.com:80 "GET / HTTP/1.1" 302 0
+2022-05-01 01:24:52,327:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET / HTTP/1.1" 200 None
+2022-05-01 01:24:54,984:root -> Application starting
+2022-05-01 01:24:56,968:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:24:56,969:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:24:57,631:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/run HTTP/1.1" 200 None
+2022-05-01 01:24:57,869:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:25:07,369:root -> Application starting
+2022-05-01 01:25:11,660:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:25:11,660:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:25:12,318:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/seek HTTP/1.1" 200 None
+2022-05-01 01:25:12,427:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:25:12,438:scrdraw.contentWindow -> Successfully display new word "seek" 
+2022-05-01 01:25:12,439:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:25:12,837:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word= HTTP/1.1" 301 0
+2022-05-01 01:25:12,837:urllib3.connectionpool -> Starting new HTTP connection (1): www.freecollocation.com:80
+2022-05-01 01:25:13,123:urllib3.connectionpool -> http://www.freecollocation.com:80 "GET / HTTP/1.1" 302 0
+2022-05-01 01:25:13,400:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET / HTTP/1.1" 200 None
+2022-05-01 01:25:32,634:root -> Application starting
+2022-05-01 01:25:34,337:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:25:34,341:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:25:35,111:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/seek HTTP/1.1" 200 None
+2022-05-01 01:25:35,169:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:25:35,171:scrdraw.contentWindow -> Successfully display new word "seek" 
+2022-05-01 01:25:35,173:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:25:35,626:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word= HTTP/1.1" 301 0
+2022-05-01 01:25:35,626:urllib3.connectionpool -> Starting new HTTP connection (1): www.freecollocation.com:80
+2022-05-01 01:25:35,919:urllib3.connectionpool -> http://www.freecollocation.com:80 "GET / HTTP/1.1" 302 0
+2022-05-01 01:25:36,133:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET / HTTP/1.1" 200 None
+2022-05-01 01:25:51,198:root -> Application starting
+2022-05-01 01:26:03,566:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:26:03,566:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:26:04,298:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/ HTTP/1.1" 200 None
+2022-05-01 01:26:04,344:root -> No body found
+2022-05-01 01:26:06,188:root -> Application starting
+2022-05-01 01:26:08,029:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:26:08,034:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:26:08,696:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/seek HTTP/1.1" 200 None
+2022-05-01 01:26:08,757:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:26:08,757:scrdraw.contentWindow -> Successfully display new word "seek" 
+2022-05-01 01:26:08,769:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:26:09,157:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word= HTTP/1.1" 301 0
+2022-05-01 01:26:09,157:urllib3.connectionpool -> Starting new HTTP connection (1): www.freecollocation.com:80
+2022-05-01 01:26:09,441:urllib3.connectionpool -> http://www.freecollocation.com:80 "GET / HTTP/1.1" 302 0
+2022-05-01 01:26:09,669:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET / HTTP/1.1" 200 None
+2022-05-01 01:27:19,462:root -> Application starting
+2022-05-01 01:27:22,543:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:27:22,544:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:27:23,373:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/seek HTTP/1.1" 200 None
+2022-05-01 01:27:23,420:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:27:23,429:scrdraw.contentWindow -> Successfully display new word "seek" 
+2022-05-01 01:27:23,429:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:27:23,852:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=seek HTTP/1.1" 200 None
+2022-05-01 01:27:23,866:scrdraw.contentWindow -> push update word to dicts
+2022-05-01 01:27:30,534:root -> Application starting
+2022-05-01 01:27:33,551:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:27:33,552:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:27:35,560:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/find HTTP/1.1" 200 None
+2022-05-01 01:27:36,929:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:27:39,202:root -> Application starting
+2022-05-01 01:27:43,408:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:27:43,409:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:27:44,071:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/eek HTTP/1.1" 200 None
+2022-05-01 01:27:44,165:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:27:44,165:scrdraw.contentWindow -> Successfully display new word "eek" 
+2022-05-01 01:27:44,178:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:27:44,792:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=eek HTTP/1.1" 200 None
+2022-05-01 01:27:46,655:root -> Application starting
+2022-05-01 01:27:48,998:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:27:49,004:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:27:49,684:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/seek HTTP/1.1" 200 None
+2022-05-01 01:27:49,815:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:27:49,815:scrdraw.contentWindow -> Successfully display new word "seek" 
+2022-05-01 01:27:49,815:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:27:50,190:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=seek HTTP/1.1" 200 None
+2022-05-01 01:27:50,190:scrdraw.contentWindow -> push update word to dicts
+2022-05-01 01:30:14,497:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:30:14,498:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:30:15,183:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/ HTTP/1.1" 200 None
+2022-05-01 01:30:15,267:root -> No body found
+2022-05-01 01:30:16,626:root -> Application starting
+2022-05-01 01:30:18,862:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:30:18,867:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:30:19,474:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/seek HTTP/1.1" 200 None
+2022-05-01 01:30:19,535:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:30:19,535:scrdraw.contentWindow -> Successfully display new word "seek" 
+2022-05-01 01:30:19,535:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:30:19,991:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=seek HTTP/1.1" 200 None
+2022-05-01 01:30:19,993:scrdraw.contentWindow -> push update word to dicts
+2022-05-01 01:30:34,946:root -> Application starting
+2022-05-01 01:30:36,424:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:30:36,425:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:30:37,099:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/hello HTTP/1.1" 200 None
+2022-05-01 01:30:37,181:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:30:37,181:scrdraw.contentWindow -> Successfully display new word "hello" 
+2022-05-01 01:30:37,188:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:30:37,507:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=hello HTTP/1.1" 200 None
+2022-05-01 01:30:39,009:root -> Application starting
+2022-05-01 01:30:43,351:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:30:43,351:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:30:43,996:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/seek HTTP/1.1" 200 None
+2022-05-01 01:30:44,118:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:30:44,130:scrdraw.contentWindow -> Successfully display new word "seek" 
+2022-05-01 01:30:44,130:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:30:44,576:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=seek HTTP/1.1" 200 None
+2022-05-01 01:30:44,588:scrdraw.contentWindow -> push update word to dicts
+2022-05-01 01:31:15,961:root -> Application starting
+2022-05-01 01:31:18,264:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:31:18,268:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:31:18,966:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/seek HTTP/1.1" 200 None
+2022-05-01 01:31:19,038:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:31:19,038:scrdraw.contentWindow -> Successfully display new word "seek" 
+2022-05-01 01:31:28,378:root -> Application starting
+2022-05-01 01:31:30,097:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:31:30,098:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:31:31,082:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/seek HTTP/1.1" 200 None
+2022-05-01 01:31:31,228:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:31:31,228:scrdraw.contentWindow -> Successfully display new word "seek" 
+2022-05-01 01:31:31,239:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:31:31,599:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=seek HTTP/1.1" 200 None
+2022-05-01 01:31:31,613:scrdraw.contentWindow -> push update word to dicts
+2022-05-01 01:31:52,628:root -> Application starting
+2022-05-01 01:31:55,016:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:31:55,017:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:31:55,725:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/seek HTTP/1.1" 200 None
+2022-05-01 01:31:55,799:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:31:55,799:scrdraw.contentWindow -> Successfully display new word "seek" 
+2022-05-01 01:31:55,810:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:31:56,172:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=seek HTTP/1.1" 200 None
+2022-05-01 01:31:56,172:scrdraw.contentWindow -> push update word to dicts
+2022-05-01 01:41:00,554:root -> Application starting
+2022-05-01 01:41:02,299:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:41:02,307:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:41:03,168:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/hello HTTP/1.1" 200 None
+2022-05-01 01:41:03,227:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:41:03,230:scrdraw.contentWindow -> Successfully display new word "hello" 
+2022-05-01 01:41:03,230:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:41:03,684:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=hello HTTP/1.1" 200 None
+2022-05-01 01:41:37,332:root -> Application starting
+2022-05-01 01:41:39,797:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:41:39,803:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:41:40,466:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/seek HTTP/1.1" 200 None
+2022-05-01 01:41:40,535:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:41:40,536:scrdraw.contentWindow -> Successfully display new word "seek" 
+2022-05-01 01:41:40,542:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:41:40,852:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=seek HTTP/1.1" 200 None
+2022-05-01 01:41:40,861:scrdraw.contentWindow -> push update word to dicts
+2022-05-01 01:42:29,682:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:42:29,688:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:42:30,723:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/ HTTP/1.1" 200 None
+2022-05-01 01:42:30,776:root -> No body found
+2022-05-01 01:42:33,039:root -> Application starting
+2022-05-01 01:42:35,408:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:42:35,413:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:42:36,145:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/seek HTTP/1.1" 200 None
+2022-05-01 01:42:36,198:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:42:36,200:scrdraw.contentWindow -> Successfully display new word "seek" 
+2022-05-01 01:43:01,887:root -> Application starting
+2022-05-01 01:43:04,297:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:43:04,304:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:43:05,870:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/seek HTTP/1.1" 200 None
+2022-05-01 01:43:06,142:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:43:06,144:scrdraw.contentWindow -> Successfully display new word "seek" 
+2022-05-01 01:43:06,150:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:43:06,501:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=seek HTTP/1.1" 200 None
+2022-05-01 01:43:06,510:scrdraw.contentWindow -> push update word to dicts
+2022-05-01 01:43:47,063:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:43:47,069:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:43:47,762:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/ HTTP/1.1" 200 None
+2022-05-01 01:43:47,818:root -> No body found
+2022-05-01 01:43:49,233:root -> Application starting
+2022-05-01 01:43:51,187:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:43:51,193:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:43:51,831:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/seek HTTP/1.1" 200 None
+2022-05-01 01:43:51,985:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:43:51,986:scrdraw.contentWindow -> Successfully display new word "seek" 
+2022-05-01 01:43:51,990:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:43:52,574:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=seek HTTP/1.1" 200 None
+2022-05-01 01:47:25,432:root -> Application starting
+2022-05-01 01:47:42,039:root -> Application starting
+2022-05-01 01:47:44,587:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:47:44,594:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:47:45,236:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/seek HTTP/1.1" 200 None
+2022-05-01 01:47:45,348:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:47:45,349:scrdraw.contentWindow -> Successfully display new word "seek" 
+2022-05-01 01:47:45,354:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:47:45,753:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=seek HTTP/1.1" 200 None
+2022-05-01 01:48:04,597:root -> Application starting
+2022-05-01 01:48:07,875:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:48:07,881:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:48:08,649:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/seek HTTP/1.1" 200 None
+2022-05-01 01:48:08,821:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:48:08,823:scrdraw.contentWindow -> Successfully display new word "seek" 
+2022-05-01 01:48:08,828:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:48:09,184:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=seek HTTP/1.1" 200 None
+2022-05-01 01:48:20,391:root -> Application starting
+2022-05-01 01:48:21,973:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:48:21,981:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:48:22,670:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/seek HTTP/1.1" 200 None
+2022-05-01 01:48:22,739:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:48:22,740:scrdraw.contentWindow -> Successfully display new word "seek" 
+2022-05-01 01:48:22,745:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:48:23,088:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=seek HTTP/1.1" 200 None
+2022-05-01 01:48:23,094:scrdraw.contentWindow -> push update word to dicts
+2022-05-01 01:52:36,754:root -> Application starting
+2022-05-01 01:52:39,803:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-01 01:52:39,812:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-01 01:52:40,449:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/seek HTTP/1.1" 200 None
+2022-05-01 01:52:40,516:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-01 01:52:40,518:scrdraw.contentWindow -> Successfully display new word "seek" 
+2022-05-01 01:52:40,525:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-01 01:52:40,875:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=seek HTTP/1.1" 200 None
+2022-05-01 01:52:40,930:scrdraw.contentWindow -> push update word to dicts
+2022-05-04 00:35:25,910:root -> Application starting
+2022-05-04 00:35:27,740:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-04 00:35:27,746:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-04 00:35:28,560:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/hello HTTP/1.1" 200 None
+2022-05-04 00:35:28,640:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-04 00:35:28,640:scrdraw.contentWindow -> Successfully display new word "hello" 
+2022-05-04 00:35:28,650:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-04 00:35:29,010:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=hello HTTP/1.1" 200 None
+2022-05-04 00:35:34,510:root -> Application starting
+2022-05-04 00:35:36,870:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-04 00:35:36,870:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-04 00:35:37,610:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/find HTTP/1.1" 200 None
+2022-05-04 00:35:37,675:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-04 00:35:41,550:root -> Application starting
+2022-05-04 00:35:46,068:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-04 00:35:46,076:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-04 00:35:46,984:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/return HTTP/1.1" 200 None
+2022-05-04 00:35:47,170:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-04 00:35:50,800:root -> Application starting
+2022-05-04 00:35:53,630:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-04 00:35:53,630:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-04 00:35:54,260:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/find HTTP/1.1" 200 None
+2022-05-04 00:35:54,340:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-04 00:36:03,591:root -> Application starting
+2022-05-04 00:36:06,435:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-04 00:36:06,443:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-04 00:36:07,161:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/see HTTP/1.1" 200 None
+2022-05-04 00:36:07,257:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-04 00:36:09,020:root -> Application starting
+2022-05-04 00:36:11,327:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-04 00:36:11,333:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-04 00:36:11,795:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/ome HTTP/1.1" 302 0
+2022-05-04 00:36:12,081:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/ HTTP/1.1" 200 None
+2022-05-04 00:36:12,119:root -> No body found
+2022-05-04 00:36:13,456:root -> Application starting
+2022-05-04 00:36:14,947:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-04 00:36:14,955:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-04 00:36:15,576:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/come HTTP/1.1" 200 None
+2022-05-04 00:36:15,666:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-04 00:36:19,096:root -> Application starting
+2022-05-04 00:36:22,630:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-04 00:36:22,635:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-04 00:36:23,386:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/reset HTTP/1.1" 200 None
+2022-05-04 00:36:23,480:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-04 00:36:23,482:scrdraw.contentWindow -> Successfully display new word "reset" 
+2022-05-04 00:36:23,486:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-04 00:36:23,850:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=reset HTTP/1.1" 200 None
+2022-05-04 00:37:00,465:root -> Application starting
+2022-05-04 00:37:02,312:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-04 00:37:02,318:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-04 00:37:03,170:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/lose HTTP/1.1" 200 None
+2022-05-04 00:37:03,260:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-04 00:37:26,706:root -> Application starting
+2022-05-04 00:37:28,798:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-04 00:37:28,805:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-04 00:37:29,498:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/kind HTTP/1.1" 200 None
+2022-05-04 00:37:29,561:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-04 00:37:29,564:scrdraw.contentWindow -> Successfully display new word "kind" 
+2022-05-04 00:37:29,569:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-04 00:37:30,030:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=kind HTTP/1.1" 200 None
+2022-05-04 00:37:57,687:root -> Application starting
+2022-05-04 00:37:59,468:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-04 00:37:59,476:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-04 00:38:00,215:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/kind HTTP/1.1" 200 None
+2022-05-04 00:38:00,290:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-04 00:38:00,294:scrdraw.contentWindow -> Successfully display new word "kind" 
+2022-05-04 00:38:00,298:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-04 00:38:00,616:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=kind HTTP/1.1" 200 None
+2022-05-04 00:38:00,629:scrdraw.contentWindow -> push update word to dicts
+2022-05-04 00:38:45,896:root -> Application starting
+2022-05-04 00:38:47,441:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-04 00:38:47,848:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=kind HTTP/1.1" 200 None
+2022-05-04 00:38:47,857:scrdraw.contentWindow -> push update word to dicts
+2022-05-04 00:38:57,444:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-04 00:38:57,889:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word= HTTP/1.1" 301 0
+2022-05-04 00:38:57,892:urllib3.connectionpool -> Starting new HTTP connection (1): www.freecollocation.com:80
+2022-05-04 00:38:58,172:urllib3.connectionpool -> http://www.freecollocation.com:80 "GET / HTTP/1.1" 302 0
+2022-05-04 00:38:58,390:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET / HTTP/1.1" 200 None
+2022-05-04 00:39:00,153:root -> Application starting
+2022-05-04 00:39:02,032:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-04 00:39:02,039:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-04 00:39:02,709:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/kind HTTP/1.1" 200 None
+2022-05-04 00:39:02,775:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-04 00:39:02,777:scrdraw.contentWindow -> Successfully display new word "kind" 
+2022-05-04 00:39:02,782:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-04 00:39:03,189:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=kind HTTP/1.1" 200 None
+2022-05-04 00:39:03,195:scrdraw.contentWindow -> push update word to dicts
+2022-05-04 00:40:50,576:root -> Application starting
+2022-05-04 00:40:57,903:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> updating word
+2022-05-04 00:40:57,911:urllib3.connectionpool -> Starting new HTTPS connection (1): dictionary.cambridge.org:443
+2022-05-04 00:40:58,598:urllib3.connectionpool -> https://dictionary.cambridge.org:443 "GET /dictionary/english-chinese-traditional/come HTTP/1.1" 200 None
+2022-05-04 00:40:58,706:scrdraw.contentWindow -> <class 'scrdraw.contentWindow.cambridgeDict'> get info successfully
+2022-05-04 00:41:16,999:root -> Application starting
+2022-05-04 00:41:18,707:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-04 00:41:19,181:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=kind HTTP/1.1" 200 None
+2022-05-04 00:41:32,741:root -> Application starting
+2022-05-04 00:41:37,926:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-04 00:41:38,340:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=find HTTP/1.1" 200 None
+2022-05-04 00:41:40,138:root -> Application starting
+2022-05-04 00:41:42,401:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-04 00:41:42,777:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=eep HTTP/1.1" 200 None
+2022-05-04 00:41:44,417:root -> Application starting
+2022-05-04 00:41:46,293:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-04 00:41:46,626:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=deep HTTP/1.1" 200 None
+2022-05-04 00:42:38,357:root -> Application starting
+2022-05-04 00:42:57,102:root -> Application starting
+2022-05-04 00:43:01,192:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-04 00:43:01,682:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=come HTTP/1.1" 200 None
+2022-05-04 00:43:19,540:root -> Application starting
+2022-05-04 00:43:21,093:urllib3.connectionpool -> Starting new HTTPS connection (1): www.freecollocation.com:443
+2022-05-04 00:43:21,548:urllib3.connectionpool -> https://www.freecollocation.com:443 "GET /search?word=find HTTP/1.1" 200 None
+2022-05-04 00:43:21,559:scrdraw.contentWindow -> push update word to dicts

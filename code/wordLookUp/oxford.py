@@ -1,10 +1,11 @@
 from bs4 import BeautifulSoup, NavigableString
 import requests, logging
+import re
 
 headers = {'User-Agent':'Mozilla/5.0 (Windows NT 6.0; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0'}
 oxford_url = 'https://www.freecollocation.com/search?word='
 
-def oxford(word):
+def oxfordCollFind(word):
     """
     return different usage 
 
@@ -30,14 +31,14 @@ def oxford(word):
 
         # find words to use 
         for w in difmean.findAll('b'):
-            result[i][0] += ', ' if result[i][0] != '' else ''
-            result[i][0] += w.text.strip().replace(' | ', ', ')
+            # result[i][0] += ', ' if result[i][0] != '' else ''
+            result[i][0] += re.sub('\|', ', ', w.text.strip())
         # find example sentences
         for s in difmean.findAll('i'):
             result[i][1] += '\n' if result[i][1] != '' else ''
             result[i][1] += s.text.strip()
 
-    
-    print(result)
+    return result
 
-oxford('find')
+# print(oxfordCollFind('kind'))
+# print(oxfordCollFind('seek'))
